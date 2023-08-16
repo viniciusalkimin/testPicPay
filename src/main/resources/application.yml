@@ -1,0 +1,17 @@
+application:
+  context-path: /pagamento-simplificado/api
+
+spring:
+  application:
+    name: pagamento-simplificado
+  database: h2
+  datasource:
+    url: jdbc:h2:mem:pagamento-simplificado
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+  profiles:
+    active:
+      local
