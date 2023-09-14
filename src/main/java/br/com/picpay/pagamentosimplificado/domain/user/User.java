@@ -1,5 +1,6 @@
 package br.com.picpay.pagamentosimplificado.domain.user;
 
+import br.com.picpay.pagamentosimplificado.domain.account.Account;
 import br.com.picpay.pagamentosimplificado.domain.user.dto.UserRecord;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

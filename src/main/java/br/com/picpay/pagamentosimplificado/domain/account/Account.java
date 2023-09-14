@@ -19,5 +19,8 @@ public abstract class Account {
 
     private BigDecimal balance;
 
+    @Enumerated(EnumType.STRING)
+    private AccountType accountType;
+
     public abstract BigDecimal receivePayment(Account payerAccount, BigDecimal value);
 }
