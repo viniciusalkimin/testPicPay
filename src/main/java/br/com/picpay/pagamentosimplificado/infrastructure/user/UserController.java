@@ -1,6 +1,7 @@
 package br.com.picpay.pagamentosimplificado.infrastructure.user;
 
 import br.com.picpay.pagamentosimplificado.application.user.UserService;
+import br.com.picpay.pagamentosimplificado.domain.user.dto.UserCreatedRecord;
 import br.com.picpay.pagamentosimplificado.domain.user.dto.UserRecord;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
@@ -20,7 +21,7 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity createUser(@RequestBody @Valid UserRecord userRecord) {
+    public ResponseEntity<UserCreatedRecord> createUser(@RequestBody @Valid UserRecord userRecord) {
         return ResponseEntity.ok().body(userService.createUser(userRecord));
     }
 }

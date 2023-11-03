@@ -20,11 +20,11 @@ public class UserCreateValidator {
 
         boolean existsByEmail = userRepository.existsByEmail(user.getEmail());
         boolean existsByDocument = userRepository.existsByDocument(user.getDocument());
-        if (!existsByDocument) {
+        if (existsByDocument) {
             log.error("Error to create user, document {}, alerady in use.", user.getDocument());
             throw new DocumentAlreadyUseException("Unable to create this user, document is already in use.");
         }
-        if (!existsByEmail) {
+        if (existsByEmail) {
             log.error("Error to create user, email {}, alerady in use.", user.getEmail());
             throw new EmailAlreadyUseException("Unable to create this user, email is already in use.");
         }

@@ -10,7 +10,6 @@ import java.util.UUID;
 @Service
 @AllArgsConstructor
 public class CryptoService {
-
     private static final int cryptoKey = 10;
 
     public String encryptPassword(String password) {
@@ -18,7 +17,7 @@ public class CryptoService {
         return BCrypt.hashpw(password, salt);
     }
 
-    public boolean comparePassword(String password, UUID idUser) {
-       return BCrypt.checkpw(password, "user.get().getPassword())");
+    public boolean comparePassword(String password, String passwordEncrypted) {
+       return BCrypt.checkpw(password, passwordEncrypted);
     }
 }
