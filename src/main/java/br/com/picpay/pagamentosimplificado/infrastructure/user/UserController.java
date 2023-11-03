@@ -1,6 +1,6 @@
 package br.com.picpay.pagamentosimplificado.infrastructure.user;
 
-import br.com.picpay.pagamentosimplificado.application.user.UserService;
+import br.com.picpay.pagamentosimplificado.application.user.service.UserService;
 import br.com.picpay.pagamentosimplificado.domain.user.dto.UserCreatedRecord;
 import br.com.picpay.pagamentosimplificado.domain.user.dto.UserRecord;
 import jakarta.validation.Valid;
