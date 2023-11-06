@@ -2,10 +2,8 @@ package br.com.picpay.pagamentosimplificado.application.account.service;
 
 import br.com.picpay.pagamentosimplificado.application.account.dto.TransactionDataDTO;
 import br.com.picpay.pagamentosimplificado.application.account.dto.CreationAccountDataDTO;
+import br.com.picpay.pagamentosimplificado.domain.account.dto.AccountCreatedRecord;
 
 public interface AccountService {
-
-    void sendTransaction(TransactionDataDTO transactionDataDTO);
-
-    Object createAccount(CreationAccountDataDTO creationAccountDataDTO);
+    AccountCreatedRecord createAccount(CreationAccountDataDTO creationAccountDataDTO);
 }
