@@ -5,7 +5,6 @@ import br.com.picpay.pagamentosimplificado.application.user.exception.EmailAlrea
 import br.com.picpay.pagamentosimplificado.domain.user.User;
 import br.com.picpay.pagamentosimplificado.infrastructure.user.UserRepository;
 import lombok.AllArgsConstructor;
-import lombok.extern.log4j.Log4j;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +16,7 @@ public class UserCreateValidator {
     private UserRepository userRepository;
 
     public void validation(User user) {
-
+        log.info("Status = início, UserCreateValidator.validation().");
         boolean existsByEmail = userRepository.existsByEmail(user.getEmail());
         boolean existsByDocument = userRepository.existsByDocument(user.getDocument());
         if (existsByDocument) {
@@ -28,6 +27,6 @@ public class UserCreateValidator {
             log.error("Error to create user, email {}, alerady in use.", user.getEmail());
             throw new EmailAlreadyUseException("Unable to create this user, email is already in use.");
         }
-
+        log.info("Status = fim, UserCreateValidator.validation().");
     }
 }

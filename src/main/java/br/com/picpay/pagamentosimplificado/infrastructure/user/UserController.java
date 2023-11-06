@@ -1,6 +1,6 @@
 package br.com.picpay.pagamentosimplificado.infrastructure.user;
 
-import br.com.picpay.pagamentosimplificado.application.user.UserService;
+import br.com.picpay.pagamentosimplificado.application.user.service.UserService;
 import br.com.picpay.pagamentosimplificado.domain.user.dto.UserCreatedRecord;
 import br.com.picpay.pagamentosimplificado.domain.user.dto.UserRecord;
 import jakarta.validation.Valid;
@@ -14,11 +14,6 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
 
     private UserService userService;
-
-    @GetMapping
-    public String helloWorld() {
-        return "Hello World!";
-    }
 
     @PostMapping
     public ResponseEntity<UserCreatedRecord> createUser(@RequestBody @Valid UserRecord userRecord) {
