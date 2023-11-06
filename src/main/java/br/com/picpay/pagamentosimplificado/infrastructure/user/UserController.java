@@ -15,11 +15,6 @@ public class UserController {
 
     private UserService userService;
 
-    @GetMapping
-    public String helloWorld() {
-        return "Hello World!";
-    }
-
     @PostMapping
     public ResponseEntity<UserCreatedRecord> createUser(@RequestBody @Valid UserRecord userRecord) {
         return ResponseEntity.ok().body(userService.createUser(userRecord));

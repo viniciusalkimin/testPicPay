@@ -2,13 +2,19 @@ package br.com.picpay.pagamentosimplificado.domain.account;
 
 import br.com.picpay.pagamentosimplificado.domain.user.User;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.util.UUID;
 
 @Entity
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "accounts")
-public abstract class Account {
+public class Account {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,5 +28,8 @@ public abstract class Account {
     @Enumerated(EnumType.STRING)
     private AccountType accountType;
 
-    public abstract BigDecimal receivePayment(Account payerAccount, BigDecimal value);
+    public BigDecimal receivePayment(BigDecimal value) {
+        this.balance.add(value);
+        return balance;
+    }
 }

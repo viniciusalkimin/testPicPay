@@ -1,12 +1,10 @@
 package br.com.picpay.pagamentosimplificado.domain.user;
 
-import br.com.picpay.pagamentosimplificado.domain.account.Account;
 import br.com.picpay.pagamentosimplificado.domain.user.dto.UserRecord;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
-import jakarta.persistence.*;
 import lombok.Setter;
 
 import java.util.UUID;
