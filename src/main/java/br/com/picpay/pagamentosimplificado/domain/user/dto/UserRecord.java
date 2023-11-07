@@ -1,6 +1,6 @@
 package br.com.picpay.pagamentosimplificado.domain.user.dto;
 
-import br.com.picpay.pagamentosimplificado.domain.user.UserType;
+import br.com.picpay.pagamentosimplificado.domain.user.enums.UserType;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 

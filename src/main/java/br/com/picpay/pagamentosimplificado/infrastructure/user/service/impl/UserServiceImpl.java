@@ -1,4 +1,4 @@
-package br.com.picpay.pagamentosimplificado.application.user.service.impl;
+package br.com.picpay.pagamentosimplificado.infrastructure.user.service.impl;
 
 import br.com.picpay.pagamentosimplificado.application.user.security.CryptoService;
 import br.com.picpay.pagamentosimplificado.application.user.service.UserService;
@@ -6,7 +6,7 @@ import br.com.picpay.pagamentosimplificado.application.user.validation.UserCreat
 import br.com.picpay.pagamentosimplificado.domain.user.User;
 import br.com.picpay.pagamentosimplificado.domain.user.dto.UserCreatedRecord;
 import br.com.picpay.pagamentosimplificado.domain.user.dto.UserRecord;
-import br.com.picpay.pagamentosimplificado.infrastructure.user.UserRepository;
+import br.com.picpay.pagamentosimplificado.infrastructure.user.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

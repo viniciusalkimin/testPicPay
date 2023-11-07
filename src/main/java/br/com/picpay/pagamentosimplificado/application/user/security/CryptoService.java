@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 @Service
 @AllArgsConstructor
 public class CryptoService {
-    private static final int cryptoKey = 10;
+    private static final int CRYPTO_KEY = 10;
 
     public String encryptPassword(String password) {
-        String salt = BCrypt.gensalt(cryptoKey);
+        String salt = BCrypt.gensalt(CRYPTO_KEY );
         return BCrypt.hashpw(password, salt);
     }
 

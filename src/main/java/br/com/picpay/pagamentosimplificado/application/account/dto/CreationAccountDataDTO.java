@@ -1,6 +1,6 @@
 package br.com.picpay.pagamentosimplificado.application.account.dto;
 
-import br.com.picpay.pagamentosimplificado.domain.account.AccountType;
+import br.com.picpay.pagamentosimplificado.domain.account.enums.AccountType;
 
 import java.math.BigDecimal;
 

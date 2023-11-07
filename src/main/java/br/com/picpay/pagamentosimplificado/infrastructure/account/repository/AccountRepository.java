@@ -1,4 +1,4 @@
-package br.com.picpay.pagamentosimplificado.infrastructure.account;
+package br.com.picpay.pagamentosimplificado.infrastructure.account.repository;
 
 import br.com.picpay.pagamentosimplificado.domain.account.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
