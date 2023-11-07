@@ -14,7 +14,7 @@ public class TransactionServiceImpl implements TransactionService {
     private RabbitTemplate rabbitTemplate;
 
     private AccountValidation accountValidation;
-    private final String FILA_TRANSACAO = "transaction";
+    private final String FILA_TRANSACAO = "${queue.name}";
     @Override
     public void sendTransaction(TransactionDataDTO transactionDataDTO) {
         accountValidation.valid(transactionDataDTO);
