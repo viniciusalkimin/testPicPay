@@ -1,4 +1,4 @@
-package br.com.picpay.pagamentosimplificado.domain.user;
+package br.com.picpay.pagamentosimplificado.domain.user.enums;
 
 public enum UserType {
 

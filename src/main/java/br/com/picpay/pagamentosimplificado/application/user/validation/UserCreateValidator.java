@@ -3,7 +3,7 @@ package br.com.picpay.pagamentosimplificado.application.user.validation;
 import br.com.picpay.pagamentosimplificado.application.user.exception.DocumentAlreadyUseException;
 import br.com.picpay.pagamentosimplificado.application.user.exception.EmailAlreadyUseException;
 import br.com.picpay.pagamentosimplificado.domain.user.User;
-import br.com.picpay.pagamentosimplificado.infrastructure.user.UserRepository;
+import br.com.picpay.pagamentosimplificado.infrastructure.user.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

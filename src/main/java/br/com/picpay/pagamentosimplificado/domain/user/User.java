@@ -1,6 +1,7 @@
 package br.com.picpay.pagamentosimplificado.domain.user;
 
 import br.com.picpay.pagamentosimplificado.domain.user.dto.UserRecord;
+import br.com.picpay.pagamentosimplificado.domain.user.enums.UserType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

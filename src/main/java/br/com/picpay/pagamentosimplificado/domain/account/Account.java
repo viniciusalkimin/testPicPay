@@ -1,5 +1,6 @@
 package br.com.picpay.pagamentosimplificado.domain.account;
 
+import br.com.picpay.pagamentosimplificado.domain.account.enums.AccountType;
 import br.com.picpay.pagamentosimplificado.domain.user.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -28,8 +29,4 @@ public class Account {
     @Enumerated(EnumType.STRING)
     private AccountType accountType;
 
-    public BigDecimal receivePayment(BigDecimal value) {
-        this.balance.add(value);
-        return balance;
-    }
 }

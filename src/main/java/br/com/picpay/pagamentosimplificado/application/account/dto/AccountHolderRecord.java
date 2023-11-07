@@ -1,7 +1,7 @@
 package br.com.picpay.pagamentosimplificado.application.account.dto;
 
 import br.com.picpay.pagamentosimplificado.domain.user.User;
-import br.com.picpay.pagamentosimplificado.domain.user.UserType;
+import br.com.picpay.pagamentosimplificado.domain.user.enums.UserType;
 
 public record AccountHolderRecord(String completeName, UserType userType, String document, String email) {
 
