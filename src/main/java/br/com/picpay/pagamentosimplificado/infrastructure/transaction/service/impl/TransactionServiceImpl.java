@@ -14,10 +14,10 @@ public class TransactionServiceImpl implements TransactionService {
     private RabbitTemplate rabbitTemplate;
 
     private AccountValidation accountValidation;
-    private final String FILA_TRANSACAO = "${queue.name}";
+    private final String QUEUE_NAME = "transaction";
     @Override
     public void sendTransaction(TransactionDataDTO transactionDataDTO) {
         accountValidation.valid(transactionDataDTO);
-        rabbitTemplate.convertAndSend(FILA_TRANSACAO, transactionDataDTO);
+        rabbitTemplate.convertAndSend(QUEUE_NAME, transactionDataDTO);
     }
 }
