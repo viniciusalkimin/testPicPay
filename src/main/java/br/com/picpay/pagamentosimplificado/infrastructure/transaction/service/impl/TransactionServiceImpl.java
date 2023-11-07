@@ -1,4 +1,4 @@
-package br.com.picpay.pagamentosimplificado.application.transaction.impl;
+package br.com.picpay.pagamentosimplificado.infrastructure.transaction.service.impl;
 
 import br.com.picpay.pagamentosimplificado.application.account.dto.TransactionDataDTO;
 import br.com.picpay.pagamentosimplificado.application.account.validation.AccountValidation;
@@ -14,7 +14,7 @@ public class TransactionServiceImpl implements TransactionService {
     private RabbitTemplate rabbitTemplate;
 
     private AccountValidation accountValidation;
-    private final String FILA_TRANSACAO = "transacao";
+    private final String FILA_TRANSACAO = "transaction";
     @Override
     public void sendTransaction(TransactionDataDTO transactionDataDTO) {
         accountValidation.valid(transactionDataDTO);

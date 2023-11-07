@@ -1,4 +1,4 @@
-package br.com.picpay.pagamentosimplificado.application.user.service.impl;
+package br.com.picpay.pagamentosimplificado.infrastructure.user.service.impl;
 
 import br.com.picpay.pagamentosimplificado.application.user.security.CryptoService;
 import br.com.picpay.pagamentosimplificado.application.user.service.UserService;

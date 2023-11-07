@@ -1,10 +1,10 @@
-package br.com.picpay.pagamentosimplificado.application.account.service.impl;
+package br.com.picpay.pagamentosimplificado.infrastructure.account.service.impl;
 
 import br.com.picpay.pagamentosimplificado.application.account.dto.CreationAccountDataDTO;
 import br.com.picpay.pagamentosimplificado.application.account.service.AccountService;
 import br.com.picpay.pagamentosimplificado.application.account.utils.AccountBuilder;
-import br.com.picpay.pagamentosimplificado.domain.account.dto.AccountCreatedRecord;
-import br.com.picpay.pagamentosimplificado.domain.account.dto.AccountHolderRecord;
+import br.com.picpay.pagamentosimplificado.application.account.dto.AccountCreatedRecord;
+import br.com.picpay.pagamentosimplificado.application.account.dto.AccountHolderRecord;
 import br.com.picpay.pagamentosimplificado.infrastructure.account.AccountRepository;
 import br.com.picpay.pagamentosimplificado.infrastructure.user.UserRepository;
 import lombok.AllArgsConstructor;

@@ -1,4 +1,4 @@
-package br.com.picpay.pagamentosimplificado.domain.account.dto;
+package br.com.picpay.pagamentosimplificado.application.account.dto;
 
 import br.com.picpay.pagamentosimplificado.domain.account.Account;
 import br.com.picpay.pagamentosimplificado.domain.account.AccountType;

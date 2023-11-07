@@ -2,7 +2,7 @@ package br.com.picpay.pagamentosimplificado.infrastructure.account;
 
 import br.com.picpay.pagamentosimplificado.application.account.dto.CreationAccountDataDTO;
 import br.com.picpay.pagamentosimplificado.application.account.service.AccountService;
-import br.com.picpay.pagamentosimplificado.domain.account.dto.AccountCreatedRecord;
+import br.com.picpay.pagamentosimplificado.application.account.dto.AccountCreatedRecord;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
