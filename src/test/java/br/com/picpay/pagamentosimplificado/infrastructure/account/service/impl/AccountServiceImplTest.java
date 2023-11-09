@@ -44,7 +44,7 @@ class AccountServiceImplTest {
         var user = createUser();
         var creationDTO = createCreationAccountDTO(new BigDecimal("50"));
         when(userRepository.findById(any())).thenReturn(Optional.of(user));
-        when(accountBuilder.create(creationDTO, user)).thenReturn(ObjectBuilder.createAccount(user, new BigDecimal("50")));
+        when(accountBuilder.create(creationDTO, user)).thenReturn(ObjectBuilder.createAccount(user, AccountType.INDIVIDUAL, new BigDecimal("50")));
         var accountCreated = accountService.createAccount(creationDTO);
         assertEquals(creationDTO.initialValue(), accountCreated.balance());
         assertEquals(creationDTO.accountType(), accountCreated.accountType());

@@ -1,4 +1,4 @@
-package br.com.picpay.pagamentosimplificado.infrastructure.db;
+package br.com.picpay.pagamentosimplificado.infrastructure.config.db;
 
 import org.h2.tools.Server;
 import org.springframework.context.annotation.Bean;
