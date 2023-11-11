@@ -12,12 +12,11 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureMockMvc
 class TransactionControllerTest {
 
@@ -30,7 +29,7 @@ class TransactionControllerTest {
     @Mock
     TransactionSendedRecord transactionSendedRecord;
 
-    String path = "/pagamento-simplificado/api/transacations";
+    public static final String  path = "/pagamento-simplificado/api/transacations";
 
     @Test
     void shouldReturnStatus200SendTransaction() throws Exception {
@@ -54,9 +53,6 @@ class TransactionControllerTest {
                     "value": "15"
                 }
                 """;
-        Mockito.when(transactionService.sendTransaction(any())).thenReturn(transactionSendedRecord);
         mockMvc.perform(post(path).contentType(MediaType.APPLICATION_JSON).content(requestBody)).andExpect(status().isBadRequest());
     }
-
-
 }

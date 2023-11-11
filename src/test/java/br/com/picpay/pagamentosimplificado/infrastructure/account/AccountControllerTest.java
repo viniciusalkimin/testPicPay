@@ -2,6 +2,7 @@ package br.com.picpay.pagamentosimplificado.infrastructure.account;
 
 import br.com.picpay.pagamentosimplificado.application.account.dto.AccountCreatedRecord;
 import br.com.picpay.pagamentosimplificado.application.account.service.AccountService;
+import br.com.picpay.pagamentosimplificado.application.utils.ObjectBuilder;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -13,7 +14,10 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.math.BigDecimal;
+
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -42,7 +46,8 @@ class AccountControllerTest {
                     "initialValue": "560"
                 }
                 """;
-        Mockito.when(accountService.createAccount(any())).thenReturn(accountCreatedRecord);
+        var createAccountDTO = ObjectBuilder.createCreationAccountDTO(BigDecimal.ZERO);
+        when(accountService.createAccount(createAccountDTO)).thenReturn(accountCreatedRecord);
         mockMvc.perform(post(path).contentType(MediaType.APPLICATION_JSON).content(requestBody)).andExpect(status().isOk());
     }
 
@@ -55,7 +60,6 @@ class AccountControllerTest {
                     "initialValue": "560"
                 }
                 """;
-        Mockito.when(accountService.createAccount(any())).thenReturn(accountCreatedRecord);
         mockMvc.perform(post(path).contentType(MediaType.APPLICATION_JSON).content(requestBody)).andExpect(status().isBadRequest());
     }
 
