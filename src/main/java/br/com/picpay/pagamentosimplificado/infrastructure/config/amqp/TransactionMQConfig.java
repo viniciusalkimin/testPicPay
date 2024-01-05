@@ -1,4 +1,4 @@
-package br.com.picpay.pagamentosimplificado.infrastructure.amqp;
+package br.com.picpay.pagamentosimplificado.infrastructure.config.amqp;
 
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitAdmin;

@@ -19,7 +19,7 @@ public class AccountController {
     private AccountService accountService;
 
     @PostMapping
-    public ResponseEntity<AccountCreatedRecord> depositExceptional(@RequestBody @Valid CreationAccountDataDTO creationAccountDataDTO){
+    public ResponseEntity<AccountCreatedRecord> createAccount(@RequestBody @Valid CreationAccountDataDTO creationAccountDataDTO){
         return ResponseEntity.ok(accountService.createAccount(creationAccountDataDTO));
     }
 }

@@ -1,4 +1,4 @@
-package br.com.picpay.pagamentosimplificado.application.account.validation;
+package br.com.picpay.pagamentosimplificado.infrastructure.validation;
 
 import br.com.picpay.pagamentosimplificado.application.account.dto.TransactionDataDTO;
 import br.com.picpay.pagamentosimplificado.application.account.exception.AccountNotFoundException;

@@ -3,15 +3,13 @@ package br.com.picpay.pagamentosimplificado.domain.user;
 import br.com.picpay.pagamentosimplificado.domain.user.dto.UserRecord;
 import br.com.picpay.pagamentosimplificado.domain.user.enums.UserType;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.UUID;
 
 @Entity
 @Getter
+@ToString
 @Table(name = "users")
 @NoArgsConstructor
 @AllArgsConstructor
