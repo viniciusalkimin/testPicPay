@@ -1,8 +1,7 @@
 package br.com.picpay.pagamentosimplificado.infrastructure.transaction.service.impl;
 
-import br.com.picpay.pagamentosimplificado.application.account.validation.AccountValidation;
+import br.com.picpay.pagamentosimplificado.infrastructure.validation.AccountValidation;
 import br.com.picpay.pagamentosimplificado.application.utils.ObjectBuilder;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

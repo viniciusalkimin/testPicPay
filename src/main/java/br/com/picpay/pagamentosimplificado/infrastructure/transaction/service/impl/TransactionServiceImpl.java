@@ -1,7 +1,7 @@
 package br.com.picpay.pagamentosimplificado.infrastructure.transaction.service.impl;
 
 import br.com.picpay.pagamentosimplificado.application.account.dto.TransactionDataDTO;
-import br.com.picpay.pagamentosimplificado.application.account.validation.AccountValidation;
+import br.com.picpay.pagamentosimplificado.infrastructure.validation.AccountValidation;
 import br.com.picpay.pagamentosimplificado.application.transaction.TransactionService;
 import br.com.picpay.pagamentosimplificado.application.transaction.dto.TransactionSendedRecord;
 import lombok.AllArgsConstructor;

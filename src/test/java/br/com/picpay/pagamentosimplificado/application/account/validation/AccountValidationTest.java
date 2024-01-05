@@ -5,6 +5,7 @@ import br.com.picpay.pagamentosimplificado.application.account.exception.Account
 import br.com.picpay.pagamentosimplificado.application.account.exception.InsuficientBalanceException;
 import br.com.picpay.pagamentosimplificado.domain.account.enums.AccountType;
 import br.com.picpay.pagamentosimplificado.infrastructure.account.repository.AccountRepository;
+import br.com.picpay.pagamentosimplificado.infrastructure.validation.AccountValidation;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
