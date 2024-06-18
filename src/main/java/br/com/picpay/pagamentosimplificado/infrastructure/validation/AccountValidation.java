@@ -1,9 +1,9 @@
 package br.com.picpay.pagamentosimplificado.infrastructure.validation;
 
 import br.com.picpay.pagamentosimplificado.application.account.dto.TransactionDataDTO;
-import br.com.picpay.pagamentosimplificado.application.account.exception.AccountNotFoundException;
-import br.com.picpay.pagamentosimplificado.application.account.exception.AccountTypeNotPermitTransactionException;
-import br.com.picpay.pagamentosimplificado.application.account.exception.InsuficientBalanceException;
+import br.com.picpay.pagamentosimplificado.application.exception.AccountNotFoundException;
+import br.com.picpay.pagamentosimplificado.application.exception.AccountTypeNotPermitTransactionException;
+import br.com.picpay.pagamentosimplificado.application.exception.InsuficientBalanceException;
 import br.com.picpay.pagamentosimplificado.domain.account.enums.AccountType;
 import br.com.picpay.pagamentosimplificado.infrastructure.account.repository.AccountRepository;
 import lombok.AllArgsConstructor;

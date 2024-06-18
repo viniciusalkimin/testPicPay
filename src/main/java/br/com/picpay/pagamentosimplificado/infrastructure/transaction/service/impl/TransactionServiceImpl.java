@@ -4,6 +4,7 @@ import br.com.picpay.pagamentosimplificado.application.account.dto.TransactionDa
 import br.com.picpay.pagamentosimplificado.infrastructure.validation.AccountValidation;
 import br.com.picpay.pagamentosimplificado.application.transaction.TransactionService;
 import br.com.picpay.pagamentosimplificado.application.transaction.dto.TransactionSendedRecord;
+import br.com.picpay.pagamentosimplificado.infrastructure.validation.TransactionValidation;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -19,11 +20,13 @@ public class TransactionServiceImpl implements TransactionService {
     private RabbitTemplate rabbitTemplate;
 
     private AccountValidation accountValidation;
+    private TransactionValidation transactionValidation;
     private static final String QUEUE_NAME = "transaction";
     @Override
     public TransactionSendedRecord sendTransaction(TransactionDataDTO transactionDataDTO) {
         log.info("Status = início, TransactionService.sendTransaction().");
         accountValidation.valid(transactionDataDTO);
+        transactionValidation.valid();
         rabbitTemplate.convertAndSend(QUEUE_NAME, transactionDataDTO);
         log.info("Status = fim, TransactionService.sendTransaction().");
         return new TransactionSendedRecord(transactionDataDTO.idAccountReceiver(), transactionDataDTO.value(), LocalDateTime.now());

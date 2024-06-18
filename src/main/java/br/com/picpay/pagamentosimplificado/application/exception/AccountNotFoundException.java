@@ -1,4 +1,4 @@
-package br.com.picpay.pagamentosimplificado.application.account.exception;
+package br.com.picpay.pagamentosimplificado.application.exception;
 
 public class AccountNotFoundException extends RuntimeException {
 
